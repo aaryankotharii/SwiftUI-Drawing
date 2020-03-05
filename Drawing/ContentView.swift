@@ -10,16 +10,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        VStack {
         Path{path in
             path.move(to: CGPoint(x: 200, y: 100))
-            path.addLine(to: CGPoint(x: 100, y: 300))
-            path.addLine(to: CGPoint(x: 300, y: 300))
+            path.addLine(to: CGPoint(x: 100, y: 200))
+            path.addLine(to: CGPoint(x: 300, y: 200))
             path.addLine(to: CGPoint(x: 200, y: 100))
            // path.addLine(to: CGPoint(x: 100, y: 300))
         }
         .stroke(Color.red, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+        
+        Path{path in
+            path.move(to: CGPoint(x: 200, y: 100))
+            path.addLine(to: CGPoint(x: 100, y: 200))
+            path.addLine(to: CGPoint(x: 300, y: 200))
+            path.addLine(to: CGPoint(x: 200, y: 100))
+           // path.addLine(to: CGPoint(x: 100, y: 300))
+        }
+        .stroke(Color.blue, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
         //.fill(Color.blue)
-
+            Path{path in
+                path.move(to: CGPoint(x: 200, y: 100))
+                path.addLine(to: CGPoint(x: 100, y: 200))
+                path.addLine(to: CGPoint(x: 300, y: 200))
+                path.addLine(to: CGPoint(x: 200, y: 100))
+               // path.addLine(to: CGPoint(x: 100, y: 300))
+            }
+            .stroke(Color.green, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+            //.fill(Color.blue)
+        
+        }
     }
 }
 
